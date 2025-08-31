@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MAKEM — Groupe Industriel</title>
+  <meta name="description" content="MAKEM est un groupe industriel diversifié basé à Kinshasa : alimentation, énergie, construction et mines." />
+  <meta name="theme-color" content="#0B1320" />
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+                red: '#D21E2B',
+                red: '#D21E2B',
+              ink: '#1C1C1C',
+              red: '#D21E2B',
+                red: '#D21E2B',
+              navy: '#0B1320',
+              navyLight: '#1A2335'
+            }
+          },
+          fontFamily: {
+            inter: ['Inter','system-ui','Segoe UI','Roboto','Helvetica','Arial','sans-serif']
+          },
+          boxShadow: {
+            soft: '0 8px 30px rgba(0,0,0,.25)'
+          }
+        }
+      }
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      background: linear-gradient(135deg, #0B1320 0%, #1A2335 100%);
+      color: #f9f9f9;
+    }
+    .glass {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.15);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+    }
+  </style>
+</head>
+<body class="font-inter">
+
+  <!-- NAV -->
+  <header class="sticky top-0 z-50 glass">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <a href="#top" class="text-x10 font-extrabold tracking-wide text-white">MAKEM</a>
+      <button id="btnMenu" class="lg:hidden p-2 rounded-md border border-gray-400/40 text-white" aria-label="Ouvrir le menu">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+      <div id="navLinks" class="hidden lg:flex items-center gap-8">
+        <a href="#apropos" class="hover:text-brand-red text-gray-200">À propos</a>
+        <a href="#Nos Pôles" class="hover:text-brand-red text-gray-200">Nos Pôles</a>
+        <a href="#projets" class="hover:text-brand-red text-gray-200">Projets</a>
+        <a href="#gouvernance" class="hover:text-brand-red text-gray-200">Gouvernance</a>
+        <a href="#contact" class="hover:text-brand-red text-gray-200">Contact</a>
+        <a href="#contact" class="ml-2 inline-flex items-center rounded-md bg-brand-red px-4 py-2 font-semibold text-white hover:bg-brand-redDark shadow-soft">Nous écrire</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <main id="top">
+    <section class="py-20 md:py-28">
+      <div class="max-w-4xl mx-auto px-4 text-center">
+        <h1 class="text-4xl md:text-6xl font-extrabold text-white">
+          Créer, investir et transformer durablement.
+        </h1>
+        <p class="mt-6 text-lg md:text-xl text-gray-300">
+          MAKEM opère dans l’alimentation, l’énergie, la construction et les mines, avec une exigence d’impact local et de performance durable.
+        </p>
+        <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+          
+            <a href="#Nos Pôles" class="inline-flex items-center justify-center rounded-md bg-brand-red px-6 py-3 font-semibold text-white hover:bg-brand-redDark shadow-soft">  
+            Découvrir nos Pôles
+          </a> 
+          <a href="#contact" class="inline-flex items-center justify-center rounded-md border border-gray-400/40 px-6 py-3 font-semibold text-white hover:border-brand-red hover:text-brand-red">
+            Devenir partenaire
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- STATS -->
+    <section class="py-12">
+      <div class="max-w-6xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div class="glass rounded-xl p-6 text-center">
+          <div class="text-gray-300 text-sm">Filiales</div>
+          <div class="mt-2 text-3xl font-extrabold text-white">4</div>
+        </div>
+        <div class="glass rounded-xl p-6 text-center">
+          <div class="text-gray-300 text-sm">Présence</div>
+          <div class="mt-2 text-3xl font-extrabold text-white">Kinshasa</div>
+        </div>
+        <div class="glass rounded-xl p-6 text-center">
+          <div class="text-gray-300 text-sm">Engagement</div>
+          <div class="mt-2 text-3xl font-extrabold text-white">Durable</div>
+        </div>
+        <div class="glass rounded-xl p-6 text-center">
+          <div class="text-gray-300 text-sm">Ambition</div>
+          <div class="mt-2 text-3xl font-extrabold text-white">Continentale</div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- A PROPOS -->
+    <!-- SECTIONS GLASS -->
+    <section id="apropos" class="py-16">
+      
+    
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20">
+        <div class="grid lg:grid-cols-2 gap-10 items-start">
+          <div class="space-y-5">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-brand-white">À propos de MAKEM</h2>
+            <ul class="space-y-3">
+              MAKEM est bien plus qu’une entreprise : c’est une vision.
+Fondée sur l’héritage entrepreneurial et la volonté de bâtir un avenir solide pour la République Démocratique du Congo et l’Afrique, MAKEM se définit comme une société polyvalente, innovante et orientée vers l’impact.
+Inspirée par des valeurs de travail, intégrité et responsabilité sociale, MAKEM place l’humain au centre de son action. Nous croyons que l’innovation et l’excellence sont les clés pour relever les défis d’aujourd’hui et anticiper ceux de demain.
+Avec un regard tourné vers l’avenir et une stratégie progressive, notre ambition est de bâtir une référence africaine, reconnue pour sa fiabilité, son audace et son engagement à rendre chaque projet accessible.
+Accélérer la création de valeur locale et la souveraineté économique par des projets concrets, performants, responsables, crédible et profitable pour toutes les parties prenantes.
+Chez MAKEM, nous ne construisons pas seulement une entreprise : nous construisons un héritage.
+
+            </p>
+            <ul class="space-y-3">
+              <li class="flex gap-3"><span class="mt-1 inline-block h-2 w-2 rounded-full bg-brand-red"></span>Excellence opérationnelle et qualité sans compromis.</li>
+              <li class="flex gap-3"><span class="mt-1 inline-block h-2 w-2 rounded-full bg-brand-red"></span>Innovation pragmatique, centrée sur l’impact réel.</li>
+              <li class="flex gap-3"><span class="mt-1 inline-block h-2 w-2 rounded-full bg-brand-red"></span>Responsabilité sociale et environnementale mesurable.</li>
+            </ul>
+          </div>
+          <div class="grid grid-cols-2 gap-4">
+            <div class="rounded-xl bg-gray-50 border border-gray-200 p-6">
+              <h3 class="font-bold text-brand-navy">Mission</h3>
+              <p class="mt-2 text-gray-700">Nourrir, alimenter, bâtir et valoriser les ressources.</p>
+            </div>
+            <div class="rounded-xl bg-gray-50 border border-gray-200 p-6">
+              <h3 class="font-bold text-brand-navy">Valeurs</h3>
+              <p class="mt-2 text-gray-700">Exigence, intégrité, transparence, performance durable.</p>
+            </div>
+            <div class="rounded-xl bg-gray-50 border border-gray-200 p-6">
+              <h3 class="font-bold text-brand-navy">Capacités</h3>
+              <p class="mt-2 text-gray-700">Opérations, supply, conformité, partenariats stratégiques.</p>
+            </div>
+            <div class="rounded-xl bg-gray-50 border border-gray-200 p-6">
+              <h3 class="font-bold text-brand-navy">Gouvernance</h3>
+              <p class="mt-2 text-gray-700">Processus clairs, suivi KPI, amélioration continue.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- HISTOIRE -->
+   
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20">
+          <h2 class="text-3xl md:text-4xl font-extrabold text-brand-white">Notre Histoire</h2>
+          <div class="mt-6 space-y-5 text-ink-300 leading-relaxed">
+            <p><strong>Tout a commencé par un nom : Makem.</strong><br>
+            Un nom simple, mais porteur d’une histoire profonde.</p>
+
+            <p>Mon père, <strong>Emmanuel Makila Musumary</strong>, rêvait lui aussi d’entreprendre.  
+            Un jour, affaibli par la maladie, il me parla de son projet : <em>Makem Screen Design</em>.  
+            Pour lui, c’était peut-être momentané, une idée parmi d’autres.  
+            Mais pour moi, ce fut une révélation.</p>
+
+            <p>Derrière ce nom, je voyais plus qu’un projet : je voyais un héritage, un souffle de vie, une vision qui ne demandait qu’à grandir. Alors, j’ai décidé de reprendre ce flambeau.</p>
+
+            <p>Aujourd’hui, <strong>Makem</strong> n’est pas seulement une entreprise.  
+            C’est la continuité d’un rêve transmis de père en fils.  
+            C’est la preuve que même ce qui semble inachevé peut renaître, se transformer et briller à travers les générations.</p>
+
+            <p class="text-lg font-semibold text-ink-100">Makem, c’est l’héritage devenu futur.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="nos Pôles" class="py-16">
+      <div class="max-w-6xl mx-auto px-4">
+        <h2 class="text-3xl font-extrabold text-white mb-8">Nos Pôles</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="glass rounded-xl p-6">
+            <h3 class="font-bold text-white">Yabiso Food</h3>
+            <p class="mt-2 text-gray-300">Distribution & agro-transformation.</p>
+          </div>
+          <div class="glass rounded-xl p-6">
+            <h3 class="font-bold text-white">MKM Énergie</h3>
+            <p class="mt-2 text-gray-300">Solutions électriques hybrides.</p>
+          </div>
+          <div class="glass rounded-xl p-6">
+            <h3 class="font-bold text-white">MKM Construction</h3>
+            <p class="mt-2 text-gray-300">BTP et immobilier durable.</p>
+          </div>
+          <div class="glass rounded-xl p-6">
+            <h3 class="font-bold text-white">MKM Mine</h3>
+            <p class="mt-2 text-gray-300">Exploitation responsable.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    
+    <!-- PROJETS / MISE EN AVANT -->
+    <section id="projets" class="border-t border-base-800/60">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8 py-16 md:py-24">
+        <div class="max-w-3xl">
+          <h2 class="text-3xl md:text-4xl font-extrabold will-animate opacity-0 translate-y-4" data-animate>Projets phares</h2>
+          <p class="mt-3 text-ink-300 will-animate opacity-0 translate-y-4" data-animate>Feuille de route proactive, partenariats sélectifs.</p>
+        </div>
+
+        <div class="mt-10 grid lg:grid-cols-3 gap-6">
+          <div class="rounded-2xl bg-base-800 border border-base-700 p-6 will-animate opacity-0 translate-y-4" data-animate>
+            <h3 class="font-bold">Chaîne froide Yabiso</h3>
+            <p class="mt-2 text-ink-300">Stockage normé, hubs logistiques et livraison urbaine optimisée.</p>
+            <div class="mt-4 text-ink-500 text-sm">Phase : Design & Partenariats</div>
+          </div>
+          <div class="rounded-2xl bg-base-800 border border-base-700 p-6 will-animate opacity-0 translate-y-4" data-animate>
+            <h3 class="font-bold">Microgrids hybrides</h3>
+            <p class="mt-2 text-ink-300">Solaire + stockage + back-up pour sites industriels.</p>
+            <div class="mt-4 text-ink-500 text-sm">Phase : Études préliminaires</div>
+          </div>
+          <div class="rounded-2xl bg-base-800 border border-base-700 p-6 will-animate opacity-0 translate-y-4" data-animate>
+            <h3 class="font-bold">Programme BTP standardisé</h3>
+            <p class="mt-2 text-ink-300">Catalogues techniques, contrôle qualité et supply chain locale.</p>
+            <div class="mt-4 text-ink-500 text-sm">Phase : Spécifications</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+ <!-- GOUVERNANCE -->
+    <section id="gouvernance" class="border-t border-ink-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20">
+        <div class="grid lg:grid-cols-2 gap-10">
+          <div>
+            <h2 class="text-3xl md:text-4xl font-extrabold text-brand-ink">Engagement & Gouvernance</h2>
+            <p class="mt-3 text-ink-700">Transparence, conformité et amélioration continue au service d’une croissance solide.</p>
+            <ul class="mt-6 space-y-3">
+              <li class="flex gap-3"><span class="mt-1 inline-block h-2 w-2 rounded-full bg-brand-red"></span>Conformité réglementaire & éthique des affaires</li>
+              <li class="flex gap-3"><span class="mt-1 inline-block h-2 w-2 rounded-full bg-brand-red"></span>Suivi des indicateurs de performance (KPI)</li>
+              <li class="flex gap-3"><span class="mt-1 inline-block h-2 w-2 rounded-full bg-brand-red"></span>Dialogue parties prenantes & ancrage local</li>
+            </ul>
+          </div>
+          <div class="grid grid-cols-2 gap-4">
+            <div class="rounded-xl bg-gray-50 border border-white-200 p-6">
+              <h3 class="font-bold text-brand-navy">ESG</h3>
+              <p class="mt-2 text-gray-700">Santé, sécurité, climat et inclusion sociale.</p>
+            </div>
+            <div class="rounded-xl bg-gray-50 border border-ink-200 p-6">
+              <h3 class="font-bold text-brand-navy">Audit</h3>
+              <p class="mt-2 text-gray-700">Processus documentés, contrôles et traçabilité.</p>
+            </div>
+            <div class="rounded-xl bg-gray-50 border border-gray-200 p-6">
+              <h3 class="font-bold text-brand-navy">Risques</h3>
+              <p class="mt-2 text-gray-700">Cartographie et plans de mitigation.</p>
+            </div>
+            <div class="rounded-xl bg-gray-50 border border-gray-200 p-6">
+              <h3 class="font-bold text-brand-navy">Partenariats</h3>
+              <p class="mt-2 text-gray-700">Alliances techniques & financières.</p>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+     <!-- CTA -->
+      <div class="mx-auto max-w-7xl px-6 lg:px-8 py-16 md:py-20">
+        <div class="rounded-2xl bg-gradient-to-br from-base-800 to-base-700 border border-base-700 p-8 md:p-12 text-center will-animate opacity-0 translate-y-4" data-animate>
+          <h2 class="text-2xl md:text-3xl font-extrabold">Investir ensemble, construire durablement.</h2>
+          <p class="mt-3 text-ink-300">Vous avez un projet, une concession, une idée ? Parlons concret.</p>
+          <a href="#contact" class="mt-6 inline-flex items-center justify-center rounded-md bg-brand-red px-6 py-3 font-semibold text-base-900 hover:bg-brand-goldDim transition shadow-soft">Entrer en contact</a>
+        </div>
+      </div>
+    </section>
+   
+      <section id="direction" aria-labelledby="direction-title">
+  <style>
+    #direction {
+      padding: 3rem 1.5rem;
+          
+      position: relative;
+    }
+
+    #direction .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      color: white;
+    }
+
+    #direction h2 {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    #direction p.lead {
+      text-align: center;
+      margin-bottom: 2rem;
+      font-size: 1.05rem;
+      line-height: 1.6;
+      color: rgba(255,255,255,0.95);
+    }
+
+    /* Carrousel horizontal */
+    .carousel-wrapper {
+      position: relative;
+    }
+
+    .team-carousel {
+      display: flex;
+      gap: 1.25rem;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      padding-bottom: 1rem;
+    }
+
+    .team-carousel::-webkit-scrollbar {
+      display: none;
+    }
+
+    .leader {
+      min-width: 260px;
+      flex: 0 0 auto;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      padding: 1rem;
+      border-radius: 10px;
+      backdrop-filter: blur(4px);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    .leader:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+    }
+
+    .leader h3 {
+      margin: 0 0 0.25rem;
+      font-size: 1.05rem;
+    }
+
+    .leader .role {
+      margin: 0 0 0.5rem;
+      font-weight: 700;
+      color: rgba(255,255,255,0.9);
+      font-size: 0.95rem;
+    }
+
+    .leader p {
+      margin: 0;
+      font-size: 0.85rem;
+      line-height: 1.4;
+      color: rgba(255,255,255,0.85);
+    }
+
+    /* Flèches */
+    .carousel-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0,0,0,0.3);
+      border: none;
+      color: white;
+      font-size: 2rem;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+      border-radius: 50%;
+      z-index: 10;
+      opacity: 0; /* invisibles par défaut */
+      transition: opacity 0.25s ease;
+    }
+
+    .carousel-wrapper:hover .carousel-btn {
+      opacity: 1; /* apparaissent au survol */
+    }
+
+    .carousel-btn-left {
+      left: 0;
+    }
+
+    .carousel-btn-right {
+      right: 0;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .leader { min-width: 220px; }
+      #direction p.lead { font-size: 1rem; }
+    }
+  </style>
+
+  
+    <div class="carousel-wrapper">
+      <button class="carousel-btn carousel-btn-left" onclick="scrollCarousel(-1)">&#10094;</button>
+      <div class="team-carousel" id="teamCarousel">
+        <a href="https://www.linkedin.com/in/musumarydikesachristopher" target="_blank" class="leader">
+          <h3>Christopher Dikesa Marion Musumary</h3>
+          <div class="role">Fondateur &amp; PDG</div>
+          <p>Visionnaire et entrepreneur engagé, à l’origine du concept MAKEM.</p>
+        </a>
+
+        <a href="https://www.linkedin.com/in/[nom-a-ajouter]/" target="_blank" class="leader">
+          <h3>[Nom à ajouter]</h3>
+          <div class="role">Directeur Général Adjoint</div>
+          <p>Assure le suivi opérationnel des projets et coordonne les différents pôles.</p>
+        </a>
+
+        <a href="https://www.linkedin.com/in/[nom-a-ajouter]/" target="_blank" class="leader">
+          <h3>[Nom à ajouter]</h3>
+          <div class="role">Directeur Administratif et Financier</div>
+          <p>Responsable de la gestion financière et de la bonne gouvernance.</p>
+        </a>
+
+        <a href="https://www.linkedin.com/in/[nom-a-ajouter]/" target="_blank" class="leader">
+          <h3>[Nom à ajouter]</h3>
+          <div class="role">Directeur Marketing &amp; Communication</div>
+          <p>Développement de l’image de marque et des relations clients.</p>
+        </a>
+
+        <a href="https://www.linkedin.com/in/[nom-a-ajouter]/" target="_blank" class="leader">
+          <h3>[Nom à ajouter]</h3>
+          <div class="role">Directeur des Opérations</div>
+          <p>Supervise les projets et veille à l’excellence opérationnelle.</p>
+        </a>
+      </div>
+      <button class="carousel-btn carousel-btn-right" onclick="scrollCarousel(1)">&#10095;</button>
+    </div>
+  </div>
+
+  <script>
+    function scrollCarousel(direction) {
+      const carousel = document.getElementById('teamCarousel');
+      const scrollAmount = 300; // px à scroller
+      carousel.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
+    }
+  </script>
+</section>
+    <!-- CONTACT -->
+    <section id="contact" class="border-t border-base-800/60">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8 py-16 md:py-24">
+        <div class="grid lg:grid-cols-2 gap-10 items-start">
+          <div class="space-y-6 will-animate opacity-0 translate-y-4" data-animate>
+            <h2 class="text-3xl md:text-4xl font-extrabold">Contact</h2>
+            <p class="text-navy-300">Kinshasa, République Démocratique du Congo</p>
+            <div class="space-y-3 text-ink-300">
+              <div class="flex items-center gap-3">
+                <span class="inline-block h-2 w-2 rounded-full bg-brand-red"></span>
+                <a href="mailto:contact@makem-group.cd" class="hover:text-brand-red">contact@makem-group.cd</a>
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="inline-block h-2 w-2 rounded-full bg-brand-red"></span>
+                <a href="tel:+243998379211" class="hover:text-brand-red">+243 998 379 211</a>
+              </div>
+            </div>
+            <div class="pt-2">
+              <p class="text-sm text-ink-500">Réseaux (optionnel) — LinkedIn, WhatsApp Business, etc.</p>
+            </div>
+          </div>
+
+          <form class="rounded-2xl bg-base-800 border border-base-700 p-6 md:p-8 will-animate opacity-0 translate-y-4" data-animate onsubmit="event.preventDefault(); alert('Merci ! Dans une version live, ce formulaire sera relié à votre messagerie.');">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <label class="text-sm text-navy-500">Nom complet</label>
+                <input required type="text" class="mt-1 w-full rounded-md bg-base-700 border border-base-600 px-3 py-2 text-ink-100 placeholder:text-navy-500 focus:outline-none focus:ring-2 focus:ring-brand-navy" placeholder="Votre nom">
+              </div>
+              <div>
+                <label class="text-sm text-navy-500">Email</label>
+                <input required type="email" class="mt-1 w-full rounded-md bg-base-700 border border-base-600 px-3 py-2 text-ink-100 placeholder:text-ink-500 focus:outline-none focus:ring-2 focus:ring-brand-gold" placeholder="vous@mail.com">
+              </div>
+              <div class="md:col-span-2">
+                <label class="text-sm text-navy-500">Sujet</label>
+                <select class="mt-1 w-full rounded-md bg-base-700 border border-base-600 px-3 py-2 text-navy-100 focus:outline-none focus:ring-2 focus:navy">
+                  <option>Demande d'information</option>
+                  <option>Partenariat - Yabiso Food</option>
+                  <option>Partenariat - MKM Énergie</option>
+                  <option>Partenariat - MKM Construction</option>
+                  <option>Partenariat - MKM Mine</option>
+                  <option>Opportunités d'emploi</option>
+                </select>
+              </div>
+              <div class="md:col-span-2">
+                <label class="text-sm text-navy-500">Message</label>
+                <textarea rows="4" class="mt-1 w-full rounded-md bg-base-700 border border-base-600 px-3 py-2 text-navy-100 placeholder:text-navy-500 focus:outline-none focus:ring-2 focus:ring-brand-navy" placeholder="Votre message..."></textarea>
+              </div>
+            </div>
+            <button type="submit" class="mt-6 w-full rounded-md bg-brand-red px-6 py-3 font-semibold text-base-900 hover:bg-brand-navy transition shadow-soft">Envoyer</button>
+            <p class="mt-3 text-xs text-navy-500"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-base-800/60">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8 py-10">
+      <div class="grid md:grid-cols-4 gap-6">
+        <div>
+          <div class="flex items-center gap-5">
+            <span class="font-bold">MAKEM</span>
+          </div>
+          <p class="mt-3 text-ink-500">Groupe diversifié : alimentation, énergie, construction, mines.</p>
+        </div>
+        <div>
+          <h3 class="font-semibold">nos Pôles</h3>
+          <ul class="mt-3 space-y-2 text-ink-300">
+            <li>Yabiso Food</li><li>MKM Énergie</li><li>MKM Construction</li><li>MKM Mine</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-semibold">Ressources</h3>
+          <ul class="mt-3 space-y-2 text-ink-300">
+            <li>Gouvernance</li><li>Conformité</li><li>Partenariats</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-semibold">Contact</h3>
+          <ul class="mt-3 space-y-2 text-ink-300">
+            <li><a class="hover:text-brand-gold" href="mailto:act@makem-group.cd">contact@makem-group.cd</a></li>
+            <li><a class="hover:text-brand-gold" href="tel:+243 854 442 103">+243 998 379 211</a></li>
+            <li>Kinshasa, RDC</li>
+          </ul>
+        </div>
+      </div>
+      <div class="mt-8 border-t border-base-800/60 pt-6 text-sm text-ink-500">
+        © <span id="year"></span> MAKEM Groupe. Tous droits réservés.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    // Année dynamique
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Menu mobile
+    const btn = document.getElementById('btnMenu');
+    const drawer = document.getElementById('drawer');
+    const closeBtn = document.getElementById('btnClose');
+    btn?.addEventListener('click', () => drawer.classList.remove('hidden'));
+    closeBtn?.addEventListener('click', () => drawer.classList.add('hidden'));
+    drawer?.addEventListener('click', (e) => {
+      if (e.target === drawer) drawer.classList.add('hidden');
+    });
+
+    // Apparition on-scroll
+    const items = document.querySelectorAll('[data-animate]');
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{
+        if(e.isIntersecting){
+          e.target.classList.add('animate-fadeUp');
+          e.target.classList.remove('opacity-0','translate-y-4','translate-y-3');
+          io.unobserve(e.target);
+        }
+      })
+    },{threshold:0.15});
+    items.forEach(el=>io.observe(el));
+  </script>
+</body>
+</html>
