@@ -103,7 +103,7 @@
         <a href="#top" class="flex items-center px-10 py-2" aria-label="MAKEM Accueil">
   <span class="text-xl md:text-2xl font-extrabold tracking-wide">MAKEM</span>
 </a>    
-                  <button id="btnMenu" class="lg:hidden px-8 py-2" aria-label="Ouvrir le menu">
+                  <button id="Menubtn" class="lg:hidden px-8 py-2" aria-label="Ouvrir le menu">
           <svg class="h-6 w-6 text-ink-100" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/>
           </svg>
@@ -127,7 +127,8 @@
       <div class="ml-auto h-full w-80 bg-base-800 border-l border-base-700 p-6 space-y-6">
         <div class="flex items-center justify-between">
           <span class="font-bold">Menu</span>
-          <button id="btnClose" aria-label="Fermer le menu">
+          <button id="Closebtn" aria-label="Fermer le menu">  
+            <const closeBtn = document.getElementById('Closebtn');
             <svg class="h-6 w-6 text-ink-100" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"/></svg>
           </button>
         </div>
@@ -163,7 +164,7 @@
               <a href="#contact" class="inline-flex items-center justify-center rounded-md bg-brand-red px-6 py-3 font-semibold text-base-900 hover:bg-brand-redDark transition shadow-soft">
                 Devenir partenaire
               </a>
-              <a href="#poles" class="inline-flex items-center justify-center rounded-md border border-base-700 px-6 py-3 font-semibold text-ink-100 hover:border-brand-red hover:text-brand-gold transition">
+              <a href="#poles" class="inline-flex items-center justify-center rounded-md border border-base-700 px-6 py-3 font-semibold text-white-100 hover:border-brand-red hover:text-brand-ink transition">
                 Découvrir nos pôles
               </a>
             </div>
@@ -190,7 +191,7 @@
           </div>
           <div class="rounded-lg bg-base-800 border border-base-700 p-6 will-animate opacity-0 translate-y-4" data-animate>
             <dt class="text-ink-500 text-sm">Ambition</dt>
-            <dd class="mt-1 text-3xl font-extrabold">Continentale</dd>
+            <dd class="mt-1 text-3xl font-extrabold">Innovant</dd>
           </div>
         </dl>
       </div>
@@ -233,15 +234,15 @@
             </p>
             <ul class="space-y-3">
               <li class="flex gap-3">
-                <span class="mt-1 inline-block h-2 w-2 rounded-full bg-brand-gold"></span>
+                <span class="mt-1 inline-block h-2 w-2 rounded-full bg-brand-white"></span>
                 <span>Excellence opérationnelle et qualité sans compromis.</span>
               </li>
               <li class="flex gap-3">
-                <span class="mt-1 inline-block h-2 w-2 rounded-full bg-brand-gold"></span>
+                <span class="mt-1 inline-block h-2 w-2 rounded-full bg-brand-white"></span>
                 <span>Innovation pragmatique, centrée sur l’impact réel.</span>
               </li>
               <li class="flex gap-3">
-                <span class="mt-1 inline-block h-2 w-2 rounded-full bg-brand-gold"></span>
+                <span class="mt-1 inline-block h-2 w-2 rounded-full bg-brand-white"></span>
                 <span>Responsabilité sociale et environnementale mesurable.</span>
               </li>
             </ul>
@@ -352,6 +353,206 @@
       </div>
     </section>
 
+     <!-- GOUVERNANCE -->
+    
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20">
+        <div class="grid lg:grid-cols-2 gap-10">
+          <div>
+            <h2 class="text-3xl md:text-4xl font-extrabold text-brand-ink">Engagement & Gouvernance</h2>
+            <p class="mt-3 text-ink-700">Transparence, conformité et amélioration continue au service d’une croissance solide.</p>
+            <ul class="mt-6 space-y-3">
+              <li class="flex gap-3"><span class="mt-1 inline-block h-2 w-2 rounded-full bg-brand-red"></span>Conformité réglementaire & éthique des affaires</li>
+              <li class="flex gap-3"><span class="mt-1 inline-block h-2 w-2 rounded-full bg-brand-red"></span>Suivi des indicateurs de performance (KPI)</li>
+              <li class="flex gap-3"><span class="mt-1 inline-block h-2 w-2 rounded-full bg-brand-red"></span>Dialogue parties prenantes & ancrage local</li>
+            </ul>
+          </div>
+          <div class="grid grid-cols-2 gap-4">
+            <div class="rounded-xl bg-navy-50 border border-white-200 p-6">
+              <h3 class="font-bold text-brand-navy">ESG</h3>
+              <p class="mt-2 text-ink-700">Santé, sécurité, climat et inclusion sociale.</p>
+            </div>
+            <div class="rounded-xl bg-navy-50 border border-ink-200 p-6">
+              <h3 class="font-bold text-brand-navy">Audit</h3>
+              <p class="mt-2 text-ink-700">Processus documentés, contrôles et traçabilité.</p>
+            </div>
+            <div class="rounded-xl bg-navy-50 border border-white-200 p-6">
+              <h3 class="font-bold text-brand-navy">Risques</h3>
+              <p class="mt-2 text-ink-700">Cartographie et plans de mitigation.</p>
+            </div>
+            <div class="rounded-xl bg-navy-50 border border-white-200 p-6">
+              <h3 class="font-bold text-brand-navy">Partenariats</h3>
+              <p class="mt-2 text-ink-700">Alliances techniques & financières.</p>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+        
+      <section id="direction" aria-labelledby="direction-title">
+  <style>
+    #direction {
+      padding: 3rem 1.5rem;
+          
+      position: relative;
+    }
+
+    #direction .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      color: white;
+    }
+
+    #direction h2 {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    #direction p.lead {
+      text-align: center;
+      margin-bottom: 2rem;
+      font-size: 1.05rem;
+      line-height: 1.6;
+      color: rgba(255,255,255,0.95);
+    }
+
+    /* Carrousel horizontal */
+    .carousel-wrapper {
+      position: relative;
+    }
+
+    .team-carousel {
+      display: flex;
+      gap: 1.25rem;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      padding-bottom: 1rem;
+    }
+
+    .team-carousel::-webkit-scrollbar {
+      display: none;
+    }
+
+    .leader {
+      min-width: 260px;
+      flex: 0 0 auto;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      padding: 1rem;
+      border-radius: 10px;
+      backdrop-filter: blur(4px);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    .leader:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+    }
+
+    .leader h3 {
+      margin: 0 0 0.25rem;
+      font-size: 1.05rem;
+    }
+
+    .leader .role {
+      margin: 0 0 0.5rem;
+      font-weight: 700;
+      color: rgba(255,255,255,0.9);
+      font-size: 0.95rem;
+    }
+
+    .leader p {
+      margin: 0;
+      font-size: 0.85rem;
+      line-height: 1.4;
+      color: rgba(255,255,255,0.85);
+    }
+
+    /* Flèches */
+    .carousel-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0,0,0,0.3);
+      border: none;
+      color: white;
+      font-size: 2rem;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+      border-radius: 50%;
+      z-index: 10;
+      opacity: 0; /* invisibles par défaut */
+      transition: opacity 0.25s ease;
+    }
+
+    .carousel-wrapper:hover .carousel-btn {
+      opacity: 1; /* apparaissent au survol */
+    }
+
+    .carousel-btn-left {
+      left: 0;
+    }
+
+    .carousel-btn-right {
+      right: 0;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .leader { min-width: 220px; }
+      #direction p.lead { font-size: 1rem; }
+    }
+  </style>
+
+  
+    <div class="carousel-wrapper">
+      <button class="carousel-btn carousel-btn-left" onclick="scrollCarousel(-1)">&#10094;</button>
+      <div class="team-carousel" id="teamCarousel">
+        <a href="https://www.linkedin.com/in/musumarydikesachristopher" target="_blank" class="leader">
+          <h3>Christopher Dikesa Marion Musumary</h3>
+          <div class="role">Fondateur &amp; PDG</div>
+          <p>Visionnaire et entrepreneur engagé, à l’origine du concept MAKEM.</p>
+        </a>
+
+        <a href="https://www.linkedin.com/in/[nom-a-ajouter]/" target="_blank" class="leader">
+          <h3>[Nom à ajouter]</h3>
+          <div class="role">Directeur Général Adjoint</div>
+          <p>Assure le suivi opérationnel des projets et coordonne les différents pôles.</p>
+        </a>
+
+        <a href="https://www.linkedin.com/in/[nom-a-ajouter]/" target="_blank" class="leader">
+          <h3>[Nom à ajouter]</h3>
+          <div class="role">Directeur Administratif et Financier</div>
+          <p>Responsable de la gestion financière et de la bonne gouvernance.</p>
+        </a>
+
+        <a href="https://www.linkedin.com/in/[nom-a-ajouter]/" target="_blank" class="leader">
+          <h3>[Nom à ajouter]</h3>
+          <div class="role">Directeur Marketing &amp; Communication</div>
+          <p>Développement de l’image de marque et des relations clients.</p>
+        </a>
+
+        <a href="https://www.linkedin.com/in/[nom-a-ajouter]/" target="_blank" class="leader">
+          <h3>[Nom à ajouter]</h3>
+          <div class="role">Directeur des Opérations</div>
+          <p>Supervise les projets et veille à l’excellence opérationnelle.</p>
+        </a>
+      </div>
+      <button class="carousel-btn carousel-btn-right" onclick="scrollCarousel(1)">&#10095;</button>
+    </div>
+  </div>
+
+  <script>
+    function scrollCarousel(direction) {
+      const carousel = document.getElementById('teamCarousel');
+      const scrollAmount = 300; // px à scroller
+      carousel.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
+    }
+  </script>
+</section>
+     
     <!-- CONTACT -->
     <section id="contact" class="border-t border-base-800/60">
       <div class="mx-auto max-w-7xl px-6 lg:px-8 py-16 md:py-24">
@@ -378,11 +579,11 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
                 <label class="text-sm text-ink-500">Nom complet</label>
-                <input required type="text" class="mt-1 w-full rounded-md bg-base-700 border border-base-600 px-3 py-2 text-ink-100 placeholder:text-ink-500 focus:outline-none focus:ring-2 focus:ring-brand-gold" placeholder="Votre nom">
+                <input required type="text" class="mt-1 w-full rounded-md bg-base-700 border border-base-600 px-3 py-2 text-ink-100 placeholder:text-ink-500 focus:outline-none focus:ring-2 focus:ring-brand-white" placeholder="Votre nom">
               </div>
               <div>
                 <label class="text-sm text-ink-500">Email</label>
-                <input required type="email" class="mt-1 w-full rounded-md bg-base-700 border border-base-600 px-3 py-2 text-ink-100 placeholder:text-ink-500 focus:outline-none focus:ring-2 focus:ring-brand-gold" placeholder="vous@mail.com">
+                <input required type="email" class="mt-1 w-full rounded-md bg-base-700 border border-base-600 px-3 py-2 text-ink-100 placeholder:text-ink-500 focus:outline-none focus:ring-2 focus:ring-brand-white" placeholder="vous@mail.com">
               </div>
               <div class="md:col-span-2">
                 <label class="text-sm text-ink-500">Sujet</label>
@@ -397,7 +598,7 @@
               </div>
               <div class="md:col-span-2">
                 <label class="text-sm text-ink-500">Message</label>
-                <textarea rows="4" class="mt-1 w-full rounded-md bg-base-700 border border-base-600 px-3 py-2 text-ink-100 placeholder:text-ink-500 focus:outline-none focus:ring-2 focus:ring-brand-gold" placeholder="Votre message..."></textarea>
+                <textarea rows="4" class="mt-1 w-full rounded-md bg-base-700 border border-base-600 px-3 py-2 text-ink-100 placeholder:text-ink-500 focus:outline-none focus:ring-2 focus:ring-brand-ink" placeholder="Votre message..."></textarea>
               </div>
             </div>
             <button type="submit" class="mt-6 w-full rounded-md bg-brand-red px-6 py-3 font-semibold text-base-900 hover:bg-brand-white transition shadow-soft">Envoyer</button>
@@ -451,11 +652,12 @@
     document.getElementById('year').textContent = new Date().getFullYear();
 
     // Menu mobile
-    const btn = document.getElementById('btnMenu');
+    const btn = document.getElementById('Menubtn');
+    const menuBtn = document.getElementById('Menubtn');
     const drawer = document.getElementById('drawer');
-    const closeBtn = document.getElementById('btnClose');
+    const closeBtn = document.getElementById('Closebtn');
     btn?.addEventListener('click', () => drawer.classList.remove('hidden'));
-    closeBtn?.addEventListener('click', () => drawer.classList.add('hidden'));
+    closeBtn.addEventListener('click', () => drawer.classList.remove('drawer-open'));;
     drawer?.addEventListener('click', (e) => {
       if (e.target === drawer) drawer.classList.add('hidden');
     });
