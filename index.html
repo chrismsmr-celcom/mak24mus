@@ -15,11 +15,8 @@
         extend: {
           colors: {
             brand: {
-                red: '#D21E2B',
-                red: '#D21E2B',
-              ink: '#1C1C1C',
               red: '#D21E2B',
-                red: '#D21E2B',
+              redDark: '#A51822',
               navy: '#0B1320',
               navyLight: '#1A2335'
             }
@@ -44,8 +41,8 @@
     .glass {
       background: rgba(255,255,255,0.06);
       border: 1px solid rgba(255,255,255,0.15);
-      backdrop-filter: blur(24px);
-      -webkit-backdrop-filter: blur(24px);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
     }
   </style>
 </head>
@@ -54,15 +51,15 @@
   <!-- NAV -->
   <header class="sticky top-0 z-50 glass">
     <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-      <a href="#top" class="text-x10 font-extrabold tracking-wide text-white">MAKEM</a>
-      <button id="btnMenu" class="lg:hidden p-2 rounded-md border border-gray-400/40 text-white" aria-label="Ouvrir le menu">
+      <a href="#top" class="text-xl font-extrabold tracking-wide text-white">MAKEM</a>
+      <button id="menuBtn" class="lg:hidden p-2 rounded-md border border-gray-400/40 text-white" aria-label="Ouvrir le menu">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16" />
         </svg>
       </button>
       <div id="navLinks" class="hidden lg:flex items-center gap-8">
         <a href="#apropos" class="hover:text-brand-red text-gray-200">À propos</a>
-        <a href="#Nos Pôles" class="hover:text-brand-red text-gray-200">Nos Pôles</a>
+        <a href="#poles" class="hover:text-brand-red text-gray-200">Nos Pôles</a>
         <a href="#projets" class="hover:text-brand-red text-gray-200">Projets</a>
         <a href="#gouvernance" class="hover:text-brand-red text-gray-200">Gouvernance</a>
         <a href="#contact" class="hover:text-brand-red text-gray-200">Contact</a>
@@ -82,10 +79,9 @@
           MAKEM opère dans l’alimentation, l’énergie, la construction et les mines, avec une exigence d’impact local et de performance durable.
         </p>
         <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-          
-            <a href="#Nos Pôles" class="inline-flex items-center justify-center rounded-md bg-brand-red px-6 py-3 font-semibold text-white hover:bg-brand-redDark shadow-soft">  
+          <a href="#poles" class="inline-flex items-center justify-center rounded-md bg-brand-red px-6 py-3 font-semibold text-white hover:bg-brand-redDark shadow-soft">
             Découvrir nos Pôles
-          </a> 
+          </a>
           <a href="#contact" class="inline-flex items-center justify-center rounded-md border border-gray-400/40 px-6 py-3 font-semibold text-white hover:border-brand-red hover:text-brand-red">
             Devenir partenaire
           </a>
@@ -110,7 +106,7 @@
         </div>
         <div class="glass rounded-xl p-6 text-center">
           <div class="text-gray-300 text-sm">Ambition</div>
-          <div class="mt-2 text-3xl font-extrabold text-white">mondial</div>
+          <div class="mt-2 text-3xl font-extrabold text-white">Continentale</div>
         </div>
       </div>
     </section>
@@ -163,7 +159,7 @@ Chez MAKEM, nous ne construisons pas seulement une entreprise : nous construison
     <!-- HISTOIRE -->
    
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20">
-          <h2 class="text-3xl md:text-4xl font-extrabold text-brand-white">Notre Histoire</h2>
+          <h2 class="text-3xl md:text-4xl font-extrabold text-brand-gold">Notre Histoire</h2>
           <div class="mt-6 space-y-5 text-ink-300 leading-relaxed">
             <p><strong>Tout a commencé par un nom : Makem.</strong><br>
             Un nom simple, mais porteur d’une histoire profonde.</p>
@@ -186,7 +182,7 @@ Chez MAKEM, nous ne construisons pas seulement une entreprise : nous construison
     </section>
 
 
-    <section id="nos Pôles" class="py-16">
+    <section id="poles" class="py-16">
       <div class="max-w-6xl mx-auto px-4">
         <h2 class="text-3xl font-extrabold text-white mb-8">Nos Pôles</h2>
         <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -280,7 +276,7 @@ Chez MAKEM, nous ne construisons pas seulement une entreprise : nous construison
         <div class="rounded-2xl bg-gradient-to-br from-base-800 to-base-700 border border-base-700 p-8 md:p-12 text-center will-animate opacity-0 translate-y-4" data-animate>
           <h2 class="text-2xl md:text-3xl font-extrabold">Investir ensemble, construire durablement.</h2>
           <p class="mt-3 text-ink-300">Vous avez un projet, une concession, une idée ? Parlons concret.</p>
-          <a href="#contact" class="mt-6 inline-flex items-center justify-center rounded-md bg-brand-red px-6 py-3 font-semibold text-base-900 hover:bg-brand-goldDim transition shadow-soft">Entrer en contact</a>
+          <a href="#contact" class="mt-6 inline-flex items-center justify-center rounded-md bg-brand-red px-6 py-3 font-semibold text-base-900 hover:bg-brand-navyDim transition shadow-soft">Entrer en contact</a>
         </div>
       </div>
     </section>
@@ -447,21 +443,24 @@ Chez MAKEM, nous ne construisons pas seulement une entreprise : nous construison
     }
   </script>
 </section>
+
+
+
     <!-- CONTACT -->
     <section id="contact" class="border-t border-base-800/60">
       <div class="mx-auto max-w-7xl px-6 lg:px-8 py-16 md:py-24">
         <div class="grid lg:grid-cols-2 gap-10 items-start">
           <div class="space-y-6 will-animate opacity-0 translate-y-4" data-animate>
             <h2 class="text-3xl md:text-4xl font-extrabold">Contact</h2>
-            <p class="text-navy-300">Kinshasa, République Démocratique du Congo</p>
+            <p class="text-ink-300">Kinshasa, République Démocratique du Congo</p>
             <div class="space-y-3 text-ink-300">
               <div class="flex items-center gap-3">
-                <span class="inline-block h-2 w-2 rounded-full bg-brand-red"></span>
-                <a href="mailto:contact@makem-group.cd" class="hover:text-brand-red">contact@makem-group.cd</a>
+                <span class="inline-block h-2 w-2 rounded-full bg-brand-gold"></span>
+                <a href="mailto:contact@makem-group.cd" class="hover:text-brand-gold">contact@makem-group.cd</a>
               </div>
               <div class="flex items-center gap-3">
-                <span class="inline-block h-2 w-2 rounded-full bg-brand-red"></span>
-                <a href="tel:+243998379211" class="hover:text-brand-red">+243 998 379 211</a>
+                <span class="inline-block h-2 w-2 rounded-full bg-brand-gold"></span>
+                <a href="tel:+243998379211" class="hover:text-brand-gold">+243 998 379 211</a>
               </div>
             </div>
             <div class="pt-2">
@@ -472,31 +471,31 @@ Chez MAKEM, nous ne construisons pas seulement une entreprise : nous construison
           <form class="rounded-2xl bg-base-800 border border-base-700 p-6 md:p-8 will-animate opacity-0 translate-y-4" data-animate onsubmit="event.preventDefault(); alert('Merci ! Dans une version live, ce formulaire sera relié à votre messagerie.');">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
-                <label class="text-sm text-navy-500">Nom complet</label>
-                <input required type="text" class="mt-1 w-full rounded-md bg-base-700 border border-base-600 px-3 py-2 text-ink-100 placeholder:text-navy-500 focus:outline-none focus:ring-2 focus:ring-brand-navy" placeholder="Votre nom">
+                <label class="text-sm text-ink-500">Nom complet</label>
+                <input required type="text" class="mt-1 w-full rounded-md bg-base-700 border border-base-600 px-3 py-2 text-navy-100 placeholder:text-navy-500 focus:outline-none focus:ring-2 focus:ring-brand-navy" placeholder="Votre nom">
               </div>
               <div>
-                <label class="text-sm text-navy-500">Email</label>
-                <input required type="email" class="mt-1 w-full rounded-md bg-base-700 border border-base-600 px-3 py-2 text-ink-100 placeholder:text-ink-500 focus:outline-none focus:ring-2 focus:ring-brand-gold" placeholder="vous@mail.com">
+                <label class="text-sm text-ink-500">Email</label>
+                <input required type="email" class="mt-1 w-full rounded-md bg-base-700 border border-base-600 px-3 py-2 text-navy-100 placeholder:text-navy-500 focus:outline-none focus:ring-2 focus:ring-brand-navy" placeholder="vous@mail.com">
               </div>
               <div class="md:col-span-2">
-                <label class="text-sm text-navy-500">Sujet</label>
-                <select class="mt-1 w-full rounded-md bg-base-700 border border-base-600 px-3 py-2 text-navy-100 focus:outline-none focus:ring-2 focus:navy">
-                  <option>Demande d'information</option>
-                  <option>Partenariat - Yabiso Food</option>
-                  <option>Partenariat - MKM Énergie</option>
-                  <option>Partenariat - MKM Construction</option>
-                  <option>Partenariat - MKM Mine</option>
-                  <option>Opportunités d'emploi</option>
-                </select>
+                <label class="text-sm text-navy-100">Sujet</label>
+<select class="mt-1 w-full rounded-md bg-base-700 text-white border border-base-600 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-brand-navy">
+  <option class="bg-base-700 text-white">Demande d'information</option>
+  <option class="bg-base-700 text-white">Partenariat - Yabiso Food</option>
+  <option class="bg-base-700 text-white">Partenariat - MKM Énergie</option>
+  <option class="bg-base-700 text-white">Partenariat - MKM Construction</option>
+  <option class="bg-base-700 text-white">Partenariat - MKM Mine</option>
+  <option class="bg-base-700 text-white">Opportunités d'emploi</option>
+</select>
               </div>
               <div class="md:col-span-2">
                 <label class="text-sm text-navy-500">Message</label>
                 <textarea rows="4" class="mt-1 w-full rounded-md bg-base-700 border border-base-600 px-3 py-2 text-navy-100 placeholder:text-navy-500 focus:outline-none focus:ring-2 focus:ring-brand-navy" placeholder="Votre message..."></textarea>
               </div>
             </div>
-            <button type="submit" class="mt-6 w-full rounded-md bg-brand-red px-6 py-3 font-semibold text-base-900 hover:bg-brand-navy transition shadow-soft">Envoyer</button>
-            <p class="mt-3 text-xs text-navy-500"></p>
+            <button type="submit" class="mt-6 w-full rounded-md bg-brand-red px-6 py-3 font-semibold text-base-900 hover:bg-brand-navyDim transition shadow-soft">Envoyer</button>
+            <p class="mt-3 text-xs text-ink-500">Démo. Pour un envoi réel : Formspree, EmailJS, backend Node/PHP.</p>
           </form>
         </div>
       </div>
@@ -514,7 +513,7 @@ Chez MAKEM, nous ne construisons pas seulement une entreprise : nous construison
           <p class="mt-3 text-ink-500">Groupe diversifié : alimentation, énergie, construction, mines.</p>
         </div>
         <div>
-          <h3 class="font-semibold">nos Pôles</h3>
+          <h3 class="font-semibold">Pôles</h3>
           <ul class="mt-3 space-y-2 text-ink-300">
             <li>Yabiso Food</li><li>MKM Énergie</li><li>MKM Construction</li><li>MKM Mine</li>
           </ul>
@@ -528,7 +527,7 @@ Chez MAKEM, nous ne construisons pas seulement une entreprise : nous construison
         <div>
           <h3 class="font-semibold">Contact</h3>
           <ul class="mt-3 space-y-2 text-ink-300">
-            <li><a class="hover:text-brand-gold" href="mailto:act@makem-group.cd">contact@makem-group.cd</a></li>
+            <li><a class="hover:text-brand-gold" href="mailto:contact@makem-group.cd">contact@makem-group.cd</a></li>
             <li><a class="hover:text-brand-gold" href="tel:+243 854 442 103">+243 998 379 211</a></li>
             <li>Kinshasa, RDC</li>
           </ul>
@@ -546,7 +545,7 @@ Chez MAKEM, nous ne construisons pas seulement une entreprise : nous construison
     document.getElementById('year').textContent = new Date().getFullYear();
 
     // Menu mobile
-    const btn = document.getElementById('btnMenu');
+    const btn = document.getElementById('menuBtn');
     const drawer = document.getElementById('drawer');
     const closeBtn = document.getElementById('btnClose');
     btn?.addEventListener('click', () => drawer.classList.remove('hidden'));
@@ -568,5 +567,20 @@ Chez MAKEM, nous ne construisons pas seulement une entreprise : nous construison
     },{threshold:0.15});
     items.forEach(el=>io.observe(el));
   </script>
+
+<!-- Drawer menu mobile -->
+<div id="drawer" class="hidden fixed inset-0 bg-black/70 z-50">
+  <div class="bg-brand-navy w-64 h-full p-6">
+    <button id="btnClose" class="text-white mb-6">Fermer ✖</button>
+    <nav class="flex flex-col gap-4 text-white">
+      <a href="#apropos">À propos</a>
+      <a href="#poles">Nos Pôles</a>
+      <a href="#projets">Projets</a>
+      <a href="#gouvernance">Gouvernance</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</div>
+
 </body>
 </html>
