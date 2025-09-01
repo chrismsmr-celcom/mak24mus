@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<link rel="manifest" href="manifest.json">
-<meta name="theme-color" content="#0B1320">
-<link rel="apple-touch-icon" href="icons/icon-192.png">
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>MAKEM — Groupe Industriel</title>
@@ -46,12 +43,7 @@
       border: 1px solid rgba(255,255,255,0.15);
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
-<script>
-if ("serviceWorker" in navigator) {
-  navigator.serviceWorker.register("/sw.js")
-    .then(() => console.log("Service Worker enregistré"));
-}
-</script>
+    }
   </style>
 </head>
 <body class="font-inter">
@@ -98,7 +90,6 @@ if ("serviceWorker" in navigator) {
     </section>
 
     <!-- STATS -->
-  <!-- SECTIONS GLASS -->
     <section class="py-12">
       <div class="max-w-6xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-6">
         <div class="glass rounded-xl p-6 text-center">
@@ -115,7 +106,7 @@ if ("serviceWorker" in navigator) {
         </div>
         <div class="glass rounded-xl p-6 text-center">
           <div class="text-gray-300 text-sm">Ambition</div>
-          <div class="mt-2 text-3xl font-extrabold text-white">mondial</div>
+          <div class="mt-2 text-3xl font-extrabold text-white">Continentale</div>
         </div>
       </div>
     </section>
@@ -462,14 +453,14 @@ Chez MAKEM, nous ne construisons pas seulement une entreprise : nous construison
           <div class="space-y-6 will-animate opacity-0 translate-y-4" data-animate>
             <h2 class="text-3xl md:text-4xl font-extrabold">Contact</h2>
             <p class="text-ink-300">Kinshasa, République Démocratique du Congo</p>
-            <div class="space-y-3 text-ink-300">
+            <div class="space-y-3 text-navy-300">
               <div class="flex items-center gap-3">
-                <span class="inline-block h-2 w-2 rounded-full bg-brand-gold"></span>
-                <a href="mailto:contact@makem-group.cd" class="hover:text-brand-gold">contact@makem-group.cd</a>
+                <span class="inline-block h-2 w-2 rounded-full bg-brand-red"></span>
+                <a href="mailto:contact@makem-group.cd" class="hover:text-brand-navy">contact@makem-group.cd</a>
               </div>
               <div class="flex items-center gap-3">
-                <span class="inline-block h-2 w-2 rounded-full bg-brand-gold"></span>
-                <a href="tel:+243998379211" class="hover:text-brand-gold">+243 998 379 211</a>
+                <span class="inline-block h-2 w-2 rounded-full bg-brand-red"></span>
+                <a href="tel:+243998379211" class="hover:text-brand-navy">+243 998 379 211</a>
               </div>
             </div>
             <div class="pt-2">
@@ -480,7 +471,7 @@ Chez MAKEM, nous ne construisons pas seulement une entreprise : nous construison
           <form class="rounded-2xl bg-base-800 border border-base-700 p-6 md:p-8 will-animate opacity-0 translate-y-4" data-animate onsubmit="event.preventDefault(); alert('Merci ! Dans une version live, ce formulaire sera relié à votre messagerie.');">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
-                <label class="text-sm text-ink-500">Nom complet</label>
+                <label class="text-sm text-navy-500"> Nom complet</label>
                 <input required type="text" class="mt-1 w-full rounded-md bg-base-700 border border-base-600 px-3 py-2 text-navy-100 placeholder:text-navy-500 focus:outline-none focus:ring-2 focus:ring-brand-navy" placeholder="Votre nom">
               </div>
               <div>
@@ -489,7 +480,7 @@ Chez MAKEM, nous ne construisons pas seulement une entreprise : nous construison
               </div>
               <div class="md:col-span-2">
                 <label class="text-sm text-navy-100">Sujet</label>
-<select class="mt-1 w-full rounded-md bg-base-700 text-white border border-base-600 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-brand-navy">
+<select class="mt-1 w-full rounded-md bg-base-700 text-navy border border-base-600 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-brand-navy">
   <option class="bg-base-700 text-white">Demande d'information</option>
   <option class="bg-base-700 text-white">Partenariat - Yabiso Food</option>
   <option class="bg-base-700 text-white">Partenariat - MKM Énergie</option>
@@ -563,7 +554,7 @@ Chez MAKEM, nous ne construisons pas seulement une entreprise : nous construison
       if (e.target === drawer) drawer.classList.add('hidden');
     });
 
-    // Apparition on-scroll
+     // Apparition on-scroll
     const items = document.querySelectorAll('[data-animate]');
     const io = new IntersectionObserver((entries)=>{
       entries.forEach(e=>{
@@ -576,20 +567,27 @@ Chez MAKEM, nous ne construisons pas seulement une entreprise : nous construison
     },{threshold:0.15});
     items.forEach(el=>io.observe(el));
   </script>
-
-<!-- Drawer menu mobile -->
-<div id="drawer" class="hidden fixed inset-0 bg-black/70 z-50">
-  <div class="bg-brand-navy w-64 h-full p-6">
-    <button id="btnClose" class="text-white mb-6">Fermer ✖</button>
-    <nav class="flex flex-col gap-4 text-white">
-      <a href="#apropos">À propos</a>
-      <a href="#poles">Nos Pôles</a>
-      <a href="#projets">Projets</a>
-      <a href="#gouvernance">Gouvernance</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </div>
-</div>
-
+</body>
+</html>
+<!-- Drawer mobile -->
+    <div id="drawer" class="fixed inset-0 z-40 hidden">
+      <div class="absolute inset-0 bg-black/60" aria-hidden="true"></div>
+      <div class="ml-auto h-full w-80 bg-base-800 border-l border-base-700 p-6 space-y-6">
+        <div class="flex items-center justify-between">
+          <span class="font-bold">Menu</span>
+          <button id="btnClose" aria-label="Fermer le menu">
+            <svg class="h-6 w-6 text-ink-100" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"/></svg>
+          </button>
+        </div>
+        <div class="flex flex-col gap-4">
+          <a class="hover:text-brand-gold" href="#vision">Vision</a>
+          <a class="hover:text-brand-gold" href="#poles">Pôles</a>
+          <a class="hover:text-brand-gold" href="#projets">Projets</a>
+          <a class="hover:text-brand-gold" href="#contact">Contact</a>
+          <a class="mt-2 inline-flex items-center justify-center rounded-md bg-brand-gold px-4 py-2 font-semibold text-base-900 hover:bg-brand-goldDim">Nous écrire</a>
+        </div>
+      </div>
+    </div>
+  </header>
 </body>
 </html>
